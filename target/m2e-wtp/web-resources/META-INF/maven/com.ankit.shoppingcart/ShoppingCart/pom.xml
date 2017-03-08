@@ -8,6 +8,14 @@
   <name>ShoppingCart Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
+  <!-- integreting backend with frontend project -->
+  <dependency>
+  <groupId>com.ankit.cartbackend</groupId>
+  <artifactId>CartBackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+     
      <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>

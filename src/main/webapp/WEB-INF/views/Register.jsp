@@ -22,7 +22,7 @@ EMAIL : <input type="text" name="email"><br>
 
 ADDRESS : <input type="text" name="address"><br>
 
-SUBMIT : <input type="submit" value="Login"><br>
+SUBMIT : <input type="submit" value="register"><br>
  
 
 </form>
