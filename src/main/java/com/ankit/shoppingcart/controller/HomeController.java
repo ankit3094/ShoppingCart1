@@ -4,16 +4,16 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
+
+
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ankit.cartbackend.dao.UserDAO;
 import com.ankit.cartbackend.model.User;
+
 
 @Controller
 public class HomeController {
@@ -73,22 +73,19 @@ public class HomeController {
 		//Tempororily  -user->niit password =niit@123
 		
 		ModelAndView mv = new ModelAndView("/Home");
-		mv.addObject("isUserLoggedIn", "false");
+		
 		if( userDAO.validate(id, pwd)==true)
 		
 		{
-			//Createntials are correct
-			mv.addObject("isUserLoggedIn", "true");
-			
 			user = userDAO.getUser(id);
 			
 			if(user.getRole().equals("ROLE_ADMIN"))
 			{
-				mv.addObject("isAdmin", "true");
+				mv.addObject("role", "Admin");
 			}
 			else
 			{
-				mv.addObject("isAdmin", "false");
+				mv.addObject("role", "Customer");
 			}
 			
 			mv.addObject("successMessage", "Valid Credentials");
@@ -132,4 +129,3 @@ public class HomeController {
 	
 
 }
-	

@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-Manage Categories
-
+manage category
 
 </body>
 </html>
